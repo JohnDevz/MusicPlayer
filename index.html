@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <style>
+    body {
+  background-color: white;
+  min-width: 100vw;
+  height: 100vh;
+}
+
+#texto {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+  position: relative;
+  
+}
+
+.caixinha {
+    width: 700px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 48%;
+    left: 15%;
+    border-radius: 5px;
+    font-size: 45px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.caixinha:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+    outline: none;
+}
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 35%;
+  position: relative;
+  width: 300px;
+  height: 125px;
+  border-radius: 25px;
+  font-size: 50px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: lime;
+}
+  </style>
+  
+  <head>
+    <title>Musicas</title>
+    <h1 id="texto">Toque Suas Musicas</h1>
+  </head>
+  
+  <body>
+    <input type="text" class="caixinha" placeholder="Digite a musica">
+    <div class="botao" onclick="Clicou()">Tocar Musica</div>
+    <audio id="audiu" src="https://files.catbox.moe/d973sz.mp3"></audio>
+    
+    <script>
+      function Clicou() {
+        var aldio = document.getElementById("audiu").play();
+      }
+    </script>
+  </body>
+</html>
